@@ -32,8 +32,10 @@ resource "aws_instance" "feyi_server" {
 
 
 -The project also touched on creating Ingress rules to allow 
-port 22 for ssh connection to other servers  to be possible while 
-port 80 to allow https all donje as part of the security group infrastructure using terraform.
+
+-port 22 for ssh connection to other servers  to be possible while 
+
+-port 80 to allow https all donje as part of the security group infrastructure using terraform.
 
 
 -Also included in this project is the creation of a VPC(virtual private cloud)contains different Availability Zones  and inside each AZ we have public and private Subnets.One of the reasons for having different availability zones is that if one region is down the other region can automatically take over in this way we have guaranteed No down time, continuous availability of resources all within AWs infrastructures  
