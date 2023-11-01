@@ -3,18 +3,29 @@
 
 -I first select the provider for terraform to work  with which in this case is aws so i set up that in the provider block as showen below
 
+provider "aws" {
+
+    profile= "aws"
+  
+  region = var.region
+  
+}
+
 
 
  
 -This is project also describes the creation of an AWS EC2 instance resources  with all its component such as shown below
 
 resource "aws_instance" "feyi_server" {
+
     ami         = var.ami
+    
     instance_type = "t2.micro"
    
   vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"]
      
      tags = {
+     
     Name = "aws_machine"
   }
 }
